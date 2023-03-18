@@ -1,0 +1,84 @@
+@keyframes rellenar{
+    to{
+        stroke-dasharray: var(--porcent)100;
+    }
+}
+
+body{
+    padding-top: 3%;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container h1{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.Superior{
+    display: flex;
+    flex-direction: row;
+}
+
+.Inferior{
+    display: flex;
+    flex-direction: row;
+}
+
+.Grafico{
+    /*height: 250px;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 10px solid #FF8541;
+
+    margin: 1in;*/
+    position: relative;
+}
+
+.Grafico span{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 20%;
+    right: 0%;
+    /*border: 5px solid red;*/ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 35px/1em Arial;
+}
+
+.Grafico h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+    margin: 0 0 15% 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+circle{
+    fill: none;
+    stroke: #DEDEDE;
+    stroke-width: 15;
+    stroke-dasharray: 100 100;
+    transform: rotate(-90deg);/*rotacion del circulo para que empiece en el origen*/
+    transform-origin: 50%;/*para dejar el punto de origen en el centro del circulo*/
+    
+}
+
+/*el circulo hijo se ve por encima del padre, por eso este deberia tener el color mas intenso y el area del %*/
+circle:nth-child(2){
+    stroke: var(--color);
+    stroke-dasharray: 0 100;
+    animation: rellenar 1s linear forwards;
+}
+
+
